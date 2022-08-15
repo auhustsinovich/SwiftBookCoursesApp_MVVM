@@ -108,6 +108,7 @@
                                 </state>
                                 <connections>
                                     <action selector="toggleFavorite:" destination="hmo-Qo-eMq" eventType="touchUpInside" id="7wH-tH-VXR"/>
+                                    <action selector="toggleFavourite:" destination="hmo-Qo-eMq" eventType="touchUpInside" id="X0c-MI-CSl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -130,11 +131,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="kmV-rE-bYk"/>
                     <connections>
-                        <outlet property="courseImage" destination="u0c-De-PDM" id="Qbw-6e-kof"/>
-                        <outlet property="courseNameLabel" destination="O9k-Rd-Gid" id="qlM-Ni-SCr"/>
-                        <outlet property="favoriteButton" destination="a7d-16-dfQ" id="Ad1-CG-PS5"/>
-                        <outlet property="numberOfLessonsLabel" destination="dyY-6n-q4b" id="p7H-7b-GcG"/>
-                        <outlet property="numberOfTestsLabel" destination="iqd-9N-4lr" id="GPE-eL-nXV"/>
+                        <outlet property="courseImage" destination="u0c-De-PDM" id="JIQ-DA-7FN"/>
+                        <outlet property="courseNameLabel" destination="O9k-Rd-Gid" id="uj3-yd-Lhy"/>
+                        <outlet property="favoriteButton" destination="a7d-16-dfQ" id="8GG-8t-39r"/>
+                        <outlet property="numberOfLessonsLabel" destination="dyY-6n-q4b" id="aAU-DW-aNa"/>
+                        <outlet property="numberOfTestsLabel" destination="iqd-9N-4lr" id="yII-g0-EAr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96P-b7-LLs" userLabel="First Responder" sceneMemberID="firstResponder"/>

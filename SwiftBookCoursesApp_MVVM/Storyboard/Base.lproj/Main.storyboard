@@ -107,8 +107,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28"/>
                                 </state>
                                 <connections>
-                                    <action selector="toggleFavorite:" destination="hmo-Qo-eMq" eventType="touchUpInside" id="7wH-tH-VXR"/>
-                                    <action selector="toggleFavourite:" destination="hmo-Qo-eMq" eventType="touchUpInside" id="X0c-MI-CSl"/>
+                                    <action selector="toggleFavourite:" destination="hmo-Qo-eMq" eventType="touchUpInside" id="8rC-uu-7S9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -168,6 +167,7 @@
             <point key="canvasLocation" x="61.600000000000001" y="-671.51424287856082"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="2-courselogo" width="600" height="432"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>

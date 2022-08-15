@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ex8-Ue-DCF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Courses-->
+        <scene sceneID="AiQ-Ak-53u">
+            <objects>
+                <viewController id="xmY-d3-oyg" customClass="CourseListViewController" customModule="SwiftBookCoursesApp_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GJ0-az-FHj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uYd-gU-Anp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseCell" id="pCW-NS-146" customClass="CourseCellView" customModule="SwiftbookApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pCW-NS-146" id="Fo3-jl-bOp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T6L-3c-nW7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xmY-d3-oyg" id="NoY-OD-9wP"/>
+                                    <outlet property="delegate" destination="xmY-d3-oyg" id="A3R-PK-Swd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TAd-3F-b5X"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uYd-gU-Anp" firstAttribute="bottom" secondItem="TAd-3F-b5X" secondAttribute="bottom" id="YeT-nr-0tI"/>
+                            <constraint firstItem="uYd-gU-Anp" firstAttribute="leading" secondItem="TAd-3F-b5X" secondAttribute="leading" id="agw-UE-YW9"/>
+                            <constraint firstItem="uYd-gU-Anp" firstAttribute="trailing" secondItem="TAd-3F-b5X" secondAttribute="trailing" id="e1j-Bj-HsO"/>
+                            <constraint firstItem="uYd-gU-Anp" firstAttribute="top" secondItem="TAd-3F-b5X" secondAttribute="top" id="xXw-pf-j7E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Courses" id="CbN-XM-vzj"/>
+                    <connections>
+                        <outlet property="tableView" destination="uYd-gU-Anp" id="XvB-71-b5e"/>
+                        <segue destination="hmo-Qo-eMq" kind="show" identifier="ShowDetails" id="CY3-Lh-sOV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0O-nq-NK8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="-672.41379310344837"/>
+        </scene>
+        <!--Course Details View Controller-->
+        <scene sceneID="WJj-D9-TWj">
+            <objects>
+                <viewController id="hmo-Qo-eMq" customClass="CourseDetailsViewController" customModule="SwiftBookCoursesApp_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pAi-Mq-72P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2-courselogo" translatesAutoresizingMaskIntoConstraints="NO" id="u0c-De-PDM">
+                                <rect key="frame" x="34" y="260" width="345" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="sdS-3S-T3I"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XUe-24-vCj">
+                                <rect key="frame" x="34" y="511" width="345" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of lessons: 45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-6n-q4b">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of tests: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqd-9N-4lr">
+                                        <rect key="frame" x="0.0" y="40.5" width="139.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фреймворк для создания игр SpriteKit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9k-Rd-Gid">
+                                <rect key="frame" x="20" y="179" width="374" height="54"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7d-16-dfQ">
+                                <rect key="frame" x="319" y="403" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Arw-ec-fLg"/>
+                                    <constraint firstAttribute="height" constant="60" id="PGe-Oh-EQO"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.1851396723" blue="0.1986965527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="heart.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleFavorite:" destination="hmo-Qo-eMq" eventType="touchUpInside" id="7wH-tH-VXR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WRQ-AN-USE"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="O9k-Rd-Gid" secondAttribute="trailing" constant="20" id="0Mk-C5-Ftb"/>
+                            <constraint firstItem="a7d-16-dfQ" firstAttribute="trailing" secondItem="u0c-De-PDM" secondAttribute="trailing" id="3GP-qo-dOr"/>
+                            <constraint firstItem="O9k-Rd-Gid" firstAttribute="leading" secondItem="WRQ-AN-USE" secondAttribute="leading" constant="20" id="6w7-X4-lHW"/>
+                            <constraint firstItem="XUe-24-vCj" firstAttribute="top" secondItem="u0c-De-PDM" secondAttribute="bottom" constant="48" id="Bom-af-Dhu"/>
+                            <constraint firstItem="XUe-24-vCj" firstAttribute="trailing" secondItem="u0c-De-PDM" secondAttribute="trailing" id="ECU-Lk-qTh"/>
+                            <constraint firstItem="a7d-16-dfQ" firstAttribute="trailing" secondItem="u0c-De-PDM" secondAttribute="trailing" id="JAB-6x-d1m"/>
+                            <constraint firstItem="a7d-16-dfQ" firstAttribute="bottom" secondItem="u0c-De-PDM" secondAttribute="bottom" id="PIV-YN-a8D"/>
+                            <constraint firstItem="O9k-Rd-Gid" firstAttribute="top" secondItem="WRQ-AN-USE" secondAttribute="top" constant="39" id="bKU-IO-gFH"/>
+                            <constraint firstItem="WRQ-AN-USE" firstAttribute="trailing" secondItem="u0c-De-PDM" secondAttribute="trailing" constant="35" id="dOm-Rp-Qgv"/>
+                            <constraint firstItem="u0c-De-PDM" firstAttribute="leading" secondItem="WRQ-AN-USE" secondAttribute="leading" constant="34" id="g7n-uW-VK0"/>
+                            <constraint firstItem="u0c-De-PDM" firstAttribute="top" secondItem="O9k-Rd-Gid" secondAttribute="bottom" constant="27" id="j8P-If-THe"/>
+                            <constraint firstItem="XUe-24-vCj" firstAttribute="leading" secondItem="u0c-De-PDM" secondAttribute="leading" id="q5A-Qa-pbQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kmV-rE-bYk"/>
+                    <connections>
+                        <outlet property="courseImage" destination="u0c-De-PDM" id="Qbw-6e-kof"/>
+                        <outlet property="courseNameLabel" destination="O9k-Rd-Gid" id="qlM-Ni-SCr"/>
+                        <outlet property="favoriteButton" destination="a7d-16-dfQ" id="Ad1-CG-PS5"/>
+                        <outlet property="numberOfLessonsLabel" destination="dyY-6n-q4b" id="p7H-7b-GcG"/>
+                        <outlet property="numberOfTestsLabel" destination="iqd-9N-4lr" id="GPE-eL-nXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96P-b7-LLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1496.8" y="-672.41379310344837"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ikk-ub-OdN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ex8-Ue-DCF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="oVz-Ov-wnN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96078431369999995" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.96078431369999995" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xmY-d3-oyg" kind="relationship" relationship="rootViewController" id="ZVi-oI-Z1y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7KW-5m-nbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="-671.51424287856082"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2-courselogo" width="600" height="432"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+    </resources>
+</document>

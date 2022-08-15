@@ -8,16 +8,13 @@
 import UIKit
 
 class CourseCellView: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var courseCellViewModel: CourseCellViewModelProtocol! {
+        didSet {
+            var content = defaultContentConfiguration()
+            content.text = courseCellViewModel.courseName
+            guard let imageData = courseCellViewModel.imageData else { return }
+            content.image = UIImage(data: imageData)
+            contentConfiguration = content
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
